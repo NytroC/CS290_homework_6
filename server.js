@@ -1,10 +1,12 @@
-var http = require('http');
-var my_db = require('./db');
+var database = require('./db');
 var express = require('express');
-var path    = require("path");
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var app = express();
+
+app.post('/game_info'), urlencodedParser, function(req, res) {
+	database.get_game_info(req, res);
+}
 
 app.use(express.static('public'));
 
