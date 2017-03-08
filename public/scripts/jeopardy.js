@@ -1,12 +1,13 @@
+var app = angular.module("myApp", []);
+
 $(document).ready(function() {
 	
-	console.log("hello");
 	$.post("/get_game_info").done(function(data) {
 		
-		var catergories = [];
+		app.categories = [];
 		for (var key in data) {
 			if (data[key] == "true") {
-				catergories.push(key);
+				categories.push(key);
 			}
 		}
 
@@ -16,12 +17,14 @@ $(document).ready(function() {
 				teams.push(data[key]);
 			}
 		}
-		console.log(data);
 		console.log("Success, game info received");
-		console.log(catergories);
-		console.log(teams);
+
 	}).fail(function() {	
 		console.log("Get game info failed");
 	});
 
+});
+
+app.controller("myCtrl", function($scope) {
+	$scope.categories;
 });

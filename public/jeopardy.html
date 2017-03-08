@@ -9,9 +9,13 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="scripts/jeopardy.js"></script>
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
 	<div>
 		<h1>Game on</h1>
-		<table></table>
+		<table>
+			<tr>
+			<td ng-repeat="category in categories">{{category}}</td>
+			</tr>
+		</table>
 	</div>
 </body>
