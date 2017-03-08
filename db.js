@@ -11,7 +11,7 @@ database.open(function(err,database) {
 });
 
 exports.add_game_info = function(req, res) {
-	console.log("Getting game info, db.js");
+	console.log("Adding game info, db.js");
 	var game_info = {};
 	game_info.vegetables = req.body.vegetables;
 	game_info.plants = req.body.plants;
@@ -35,6 +35,20 @@ exports.add_game_info = function(req, res) {
 	});
 
 	console.log(game_info);
-	res.send(game_info);
 	res.end();
+}
+
+exports.get_game_info = function(req, res) {
+	console.log("In get game info.");
+	database.collection('game_info', function(err, collection) {
+		collection.findOne({}, function(err, item) {
+			if (!err) {
+				console.log(item);
+				res.send(item);
+				res.end();
+			} else {
+				console.log("ERROR: get game info " + err);
+			}
+		});
+	});
 }

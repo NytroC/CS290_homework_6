@@ -11,11 +11,15 @@ app.post('/game_info', urlencodedParser, function(req, res) {
 
 app.use(express.static('public'));
 
-app.get('/jeopardy', function(req,res){
+app.get('/jeopardy', function(req, res){
 	res.sendFile(path.join(__dirname + '/public/jeopardy.html'));
 });
 
-app.get('/', function(req,res){
+app.get('/get_game_info', function(req, res) {
+	database.get_game_info(req, res);
+});
+
+app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname + '/public/index.html'));
 });
 

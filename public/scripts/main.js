@@ -26,7 +26,7 @@ $(document).ready(function() {
 						  "team_4": team_4
 						};
 
-		$.post("/game_info", game_info).done(function(data) {
+		$.post("/game_info", game_info).done(function() {
 			console.log("Success, Game info updated");
 			window.location.replace("/jeopardy");
 		}).fail(function() {
@@ -35,8 +35,7 @@ $(document).ready(function() {
 		});
 	});
 
-
-
+	
 	
 
 });
