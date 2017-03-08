@@ -43,8 +43,19 @@ exports.get_game_info = function(req, res) {
 	database.collection('game_info', function(err, collection) {
 		collection.findOne({}, function(err, item) {
 			if (!err) {
-				console.log(item);
-				res.send(item);
+				var game_info = {}
+				game_info.vegetables = item.vegetables;
+				game_info.plants = item.plants;
+				game_info.terrorists = item.terrorists;
+				game_info.ungulates = item.ungulates;
+				game_info.chickens = item.chickens;
+				game_info.murderers = item.murderers;
+				game_info.team_1 = item.team_1;
+				game_info.team_2 = item.team_2;
+				game_info.team_3 = item.team_3;
+				game_info.team_4 = item.team_4;
+				console.log(game_info);
+				res.send(game_info);
 				res.end();
 			} else {
 				console.log("ERROR: get game info " + err);
@@ -52,3 +63,13 @@ exports.get_game_info = function(req, res) {
 		});
 	});
 }
+
+
+
+
+
+
+
+
+
+
