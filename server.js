@@ -15,7 +15,7 @@ app.get('/jeopardy', function(req, res){
 	res.sendFile(path.join(__dirname + '/public/jeopardy.html'));
 });
 
-app.get('/get_game_info', function(req, res) {
+app.post('/get_game_info', function(req, res) {
 	database.get_game_info(req, res);
 });
 
