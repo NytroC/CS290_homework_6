@@ -26,13 +26,18 @@ $(document).ready(function() {
 						  "team_4": team_4
 						};
 
-		$.post("/game_info", game_info).done(function() {
-			console.log("Success, game_info");
+		$.post("/game_info", game_info).done(function(data) {
+			console.log("Success, Game info updated");
+			window.location.replace("/jeopardy");
 		}).fail(function() {
-			console.log("Failed, game_info");
+			console.log("Failed, Game info failed to update");
+			alert("Shit's busted.. 💩");
 		});
-
 	});
+
+
+
+	
 
 });
 

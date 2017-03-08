@@ -10,7 +10,7 @@ database.open(function(err,database) {
 	}
 });
 
-exports.get_game_info = function(req, res) {
+exports.add_game_info = function(req, res) {
 	console.log("Getting game info, db.js");
 	var game_info = {};
 	game_info.vegetables = req.body.vegetables;
@@ -23,6 +23,16 @@ exports.get_game_info = function(req, res) {
 	game_info.team_2 = req.body.team_2;
 	game_info.team_3 = req.body.team_3;
 	game_info.team_4 = req.body.team_4;
+
+	database.collection('game_info', function(err, collection) {
+		collection.update({}, game_info, { upsert: true }, function(err, result) {
+			if (err) {
+				console.log("ERROR: " + err);
+			} else {
+				console.log("Game info updated");
+			}
+		});
+	});
 
 	console.log(game_info);
 	res.send(game_info);
