@@ -50,3 +50,26 @@ button:focus {
 button:hover {
 	border: 2px solid #69B1F3;
 }
+
+table {
+    width: 500;
+    margin: auto;
+    padding-top: 50px;
+}
+
+td {
+    border: 1px solid white;
+}
+
+td, tr {
+    width: 75px;
+    text-align: center;
+}
+
+#game_board {
+    height: 500px;
+}
+
+#team_board {
+    height: 50px;
+}

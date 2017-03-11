@@ -9,13 +9,63 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="scripts/jeopardy.js"></script>
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-app="myApp" ng-controller="game_controller">
 	<div>
-		<h1>Game on</h1>
-		<table>
+		<table id="game_board">
 			<tr>
-			<td ng-repeat="category in categories">{{category}}</td>
+			 <th ng-repeat="category in categories">{{category}}</td>
 			</tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
 		</table>
+
+        <table id="team_board">
+            <tr>
+             <th ng-repeat="team in teams">{{team}}</td>
+            </tr>
+        </table>
 	</div>
 </body>
+
+
+
+
+
