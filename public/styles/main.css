@@ -102,12 +102,40 @@ td, tr {
     color: black;
     margin-top: 50px;
     text-align: center;
+    display: none;
 }
 
+#answer_button {
+    width: 100px;
+    display: block;
+    margin: auto;
+}
 
+.teams_question_container {
+    color: black;
+    display: block;
+    width: 175px;
+    height: 50px;
+    border: 1px solid black;
+    float: left;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin: 50px 50px;
+}
 
-
-
+.score_question_container {
+    color: black;
+    display: block;
+    width: 175px;
+    height: 50px;
+    border: 1px solid black;
+    float: left;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    margin: -50px 50px 50px 50px;
+}
 
 
 

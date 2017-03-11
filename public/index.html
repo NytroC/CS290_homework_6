@@ -1,4 +1,4 @@
-</!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>BCook & NStruhs | Jeopardy</title>
@@ -14,12 +14,14 @@
 		<hr>
 		<div id ="categories">
 		<h2>Select up to Five Categories</h2>
-			<input type="checkbox" id="vegetables-checkbox" name="vegetables">	<label class="catergories-label">vegetables</label><br/>
-			<input type="checkbox" id="plants-checkbox" name="plants">			<label class="catergories-label">carnivorous plants</label><br/>
-			<input type="checkbox" id="terrorist-checkbox" name="terrorists">	<label class="catergories-label">terrorist attacks</label><br/>
-			<input type="checkbox" id="ungulates-checkbox" name="ungulates">	<label class="catergories-label">ungulates</label><br/>
-			<input type="checkbox" id="chickens-checkbox" name="chickens">		<label class="catergories-label">chickens</label><br/>
-			<input type="checkbox" id="murderers-checkbox" name="murderers">	<label class="catergories-label">mass murderers</label>
+            <form id="categories-form">
+    			<input type="checkbox" id="vegetables-checkbox" name="vegetables">	<label class="catergories-label">vegetables</label><br/>
+    			<input type="checkbox" id="plants-checkbox" name="plants">			<label class="catergories-label">carnivorous plants</label><br/>
+    			<input type="checkbox" id="terrorist-checkbox" name="terrorists">	<label class="catergories-label">terrorist attacks</label><br/>
+    			<input type="checkbox" id="ungulates-checkbox" name="ungulates">	<label class="catergories-label">ungulates</label><br/>
+    			<input type="checkbox" id="chickens-checkbox" name="chickens">		<label class="catergories-label">chickens</label><br/>
+    			<input type="checkbox" id="murderers-checkbox" name="murderers">	<label class="catergories-label">mass murderers</label>
+            </form>
 		</div>
 		<hr>
 		<div id="teams">
@@ -30,6 +32,7 @@
 				<label class="team-label">Team 3</label><input id="team-3" class="team-input" type="text" placeholder="<Optional>"><br/>
 				<label class="team-label">Team 4</label><input id="team-4" class="team-input" type="text" placeholder="<Optional>"><br/>
 			</form>
+            <br>
 			<button id="categories-team-button">Next</button>
 		</div>
 	</div>

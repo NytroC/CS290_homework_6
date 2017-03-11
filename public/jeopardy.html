@@ -33,7 +33,12 @@
         <div id="question_container">
             <div id="close_container">X</div>
             <h2 id="question"></h2>
+                <button id="answer_button">Answer</button>
             <h3 id="answer"></h3>
+            <div id="teams_container">
+                <div class="teams_question_container" ng-repeat="team in teams">Team: {{team}}</div>
+                <div class="score_question_container" ng-repeat="score in scores">Score: {{score}}</div>
+            </div>
         </div>
 	</div>
 </body>

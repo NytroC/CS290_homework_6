@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-
 	$('#categories-team-button').click(function() {
 		var vegetables = $("#vegetables-checkbox").is(':checked');
 		var plants = $("#plants-checkbox").is(':checked');
@@ -26,6 +25,16 @@ $(document).ready(function() {
 						  "team_4": team_4
 						};
 
+        if ($("#categories-form input:checkbox:checked").length != 5) {
+            alert("You must choose 5 categories");
+            exit(1);
+        }
+
+        if ($("#team-1").val().length == 0 || $("#team-2").val().length == 0) {
+            alert("You must fill both team 1 and team 1 input fields");
+            exit(1);
+        }
+
 		$.post("/game_info", game_info).done(function() {
 			console.log("Success, Game info updated");
 			window.location.replace("/jeopardy");
@@ -34,10 +43,6 @@ $(document).ready(function() {
 			alert("Shit's busted.. 💩");
 		});
 	});
-
-	
-	
-
 });
 
 
