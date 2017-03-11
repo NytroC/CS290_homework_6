@@ -73,3 +73,33 @@ td, tr {
 #team_board {
     height: 50px;
 }
+
+#question_container {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    height: 500px;
+    top: 80px;
+    display: none;
+}
+
+#close_container {
+    font-size: 44;
+    position: absolute;
+    right: 40;
+    top: 20;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+

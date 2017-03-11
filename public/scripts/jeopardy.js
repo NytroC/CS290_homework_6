@@ -37,30 +37,20 @@ app.controller('game_controller', function($scope, $http) {
         $scope.column_4 = $scope.questions[3];
         $scope.column_5 = $scope.questions[4];
 
+        $scope.click = function(category, index) {
+            alert(category + " " + index);
+            $("#question_container").css("display", "block");
+        }
+
     });
 
-    $scope.click = function(category, index) {
-        alert(category + " " + index);
-    }
-
-    $scope.click2 = function(category) {
-        alert(category);
-    }
-
-    $scope.click3 = function(category) {
-        alert(category);
-    }
-
-    $scope.click4 = function() {
-        alert("hi four");
-    }
-
-    $scope.click5 = function() {
-        alert("hi five");
-    }
-
-
 });
+
+$(document).ready(function() {
+    $("#close_container").click(function() {
+        $("#question_container").css("display", "none");
+    });
+})
 
 
 
