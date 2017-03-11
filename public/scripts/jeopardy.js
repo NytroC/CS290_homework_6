@@ -37,9 +37,23 @@ app.controller('game_controller', function($scope, $http) {
         $scope.column_4 = $scope.questions[3];
         $scope.column_5 = $scope.questions[4];
 
-        $scope.click = function(category, index) {
-            alert(category + " " + index);
+        $scope.click = function(category, index, column_index) {
+            console.log("cat: " + category + " index: " + index + " c_i: " + column_index);
+            alert(category + " " + index + " " + column_index);
             $("#question_container").css("display", "block");
+            if (category == 'vegetables') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].vegetables[index][0]));
+            }  if (category == 'plants') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].carnivorous_plants[index][0]));
+            }  if (category == 'terrorists') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].terrorist_attacks[index][0]));
+            }  if (category == 'ungulates') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].ungulates[index][0]));
+            }  if (category == 'chickens') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].chickens[index][0]));
+            }  if (category == 'murderers') {
+                $("#question").html(JSON.stringify($scope.questions[column_index].mass_murderers[index][0]));
+            }
         }
 
     });

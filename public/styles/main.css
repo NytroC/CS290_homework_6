@@ -92,6 +92,18 @@ td, tr {
     color: black;
 }
 
+#question {
+    color: black;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#answer {
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+}
+
 
 
 
