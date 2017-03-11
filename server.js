@@ -9,6 +9,10 @@ app.post('/game_info', urlencodedParser, function(req, res) {
 	database.add_game_info(req, res);
 });
 
+app.post('/get_questions', urlencodedParser, function(req, res) {
+    database.get_questions(req, res);
+});
+
 app.use(express.static('public'));
 
 app.get('/jeopardy', function(req, res){
