@@ -16,17 +16,17 @@
 			  <th ng-repeat="category in categories">{{category}}</td>
 			</tr>
             <tr ng-repeat="category in categories">
-                <td ng-click="click(categories[0], $index, 0)">{{($index + 1) * 100}}</td>
-                <td ng-click="click(categories[1], $index, 1)">{{($index + 1) * 100}}</td>
-                <td ng-click="click(categories[2], $index, 2)">{{($index + 1) * 100}}</td>
-                <td ng-click="click(categories[3], $index, 3)">{{($index + 1) * 100}}</td>
-                <td ng-click="click(categories[4], $index, 4)">{{($index + 1) * 100}}</td>
+                <td ng-click="click($event,categories[0], $index, 0)">{{($index + 1) * 100}}</td>
+                <td ng-click="click($event,categories[1], $index, 1)">{{($index + 1) * 100}}</td>
+                <td ng-click="click($event,categories[2], $index, 2)">{{($index + 1) * 100}}</td>
+                <td ng-click="click($event,categories[3], $index, 3)">{{($index + 1) * 100}}</td>
+                <td ng-click="click($event,categories[4], $index, 4)">{{($index + 1) * 100}}</td>
             </tr>
 		</table>
 
         <table id="team_board">
             <tr>
-             <th ng-repeat="team in teams">{{team}}</td>
+             <th ng-repeat="team in teams">{{team}}:&nbsp;&nbsp;&nbsp;{{scores[$index]}}</td>
             </tr>
         </table>
 
@@ -37,7 +37,10 @@
             <h3 id="answer"></h3>
             <div id="teams_container">
                 <div class="teams_question_container" ng-repeat="team in teams">Team: {{team}}</div>
-                <div class="score_question_container" ng-repeat="score in scores">Score: {{score}}</div>
+            </div>
+            <br/>
+            <div id="scores_container">
+                <div class="score_question_container"  ng-repeat="team in teams" ng-click="update_score($index)">Score: {{scores[$index]}}</div>
             </div>
         </div>
 	</div>
